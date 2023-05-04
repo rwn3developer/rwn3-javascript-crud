@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Crud app</title>
+    </head>
+
+    <body>
+        <table border="1">
+            <input type="hidden" id="userid">
+            <tr>
+                <td>Name :- </td>
+                <td>
+                    <input type="text" id="name" />
+                </td>
+            </tr>
+            <tr>
+                <td>Email :- </td>
+                <td>
+                    <input type="text" id="email" />
+                </td>
+            </tr>
+            <tr>
+                <td>Password :- </td>
+                <td>
+                    <input type="text" id="password" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" id="save" onclick="save()" value="submit"/>
+                    <input type="button" id="edit" onclick="edit()" value="Edit"/>
+
+                </td>
+            </tr>
+        </table><br><br>
+
+        <table border="1">
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Action</td>
+            </tr>
+
+            <tbody id="record">
+
+            </tbody>
+
+        </table>
+
+
+    </body>
+</html>
+<script src="./crud.js" type="text/javascript"></script>

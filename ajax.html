@@ -1,0 +1,42 @@
+
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+    </tr>
+
+    <tbody id="record">
+
+    </tbody>
+
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+    const viewdata = () => {
+        $.ajax({
+            type : 'GET',
+            url : 'https://jsonplaceholder.typicode.com/albums',
+            success:function(res)
+            {   
+                let tbl = "";
+                    res.map((val)=>{
+                        tbl += `
+                                    <tr>
+                                        <td>${val.id}</td>
+                                        <td>${val.title}</td>
+
+                                    </tr>
+                                `
+                            console.log(val);
+                    })
+                    document.getElementById('record').innerHTML = tbl;
+            }
+        })
+    }
+    viewdata();
+
+
+</script>
